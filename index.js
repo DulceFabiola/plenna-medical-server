@@ -18,6 +18,9 @@ app.use(express.json());
 //users
 app.use("/users", require("./routes/users"));
 
+//patients
+app.use("/patients", require("./routes/patients"));
+
 //4.SERVER
 app.listen(process.env.PORT, () => {
   console.log(`Servidor trabajando en http://localhost:${process.env.PORT}`);
