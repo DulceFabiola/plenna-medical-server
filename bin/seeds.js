@@ -5,7 +5,7 @@ const Patient = require("./../models/Patient");
 require("dotenv").config();
 
 //CONEXION A BD
-mongoose.connect(process.env.MONGODB, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
