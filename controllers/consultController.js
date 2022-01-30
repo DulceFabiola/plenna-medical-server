@@ -1,8 +1,7 @@
 //IMPORTACIONES
 const Patient = require("../models/Patient");
 const Consult = require("./../models/Consult");
-const User = require("./../models/User");
-//CREAR CURSO
+//CREAR CONSULT
 exports.createConsult = async (req, res) => {
   const {
     condition,
