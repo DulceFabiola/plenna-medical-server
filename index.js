@@ -21,6 +21,9 @@ app.use("/users", require("./routes/users"));
 //patients
 app.use("/patients", require("./routes/patients"));
 
+//consults
+app.use("/consults", require("./routes/consults"));
+
 //4.SERVER
 app.listen(process.env.PORT, () => {
   console.log(`Servidor trabajando en http://localhost:${process.env.PORT}`);

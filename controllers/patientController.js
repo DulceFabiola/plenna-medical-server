@@ -64,3 +64,27 @@ exports.editPatient = async (req, res) => {
     });
   }
 };
+
+exports.addConsult = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const updateUser = await Patient.findByIdAndUpdate(
+      req.user.id,
+      {
+        $push: { myconsults: id },
+      },
+      { new: true }
+    );
+    res.json({
+      msg: "Datos actualizados con éxito",
+      data: updateUser,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      msg: "Hubo un error actualizando los datos.",
+      error: error,
+    });
+  }
+};

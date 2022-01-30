@@ -163,7 +163,7 @@ exports.readOneUser = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const user = await User.findById(id).populate("mycourses");
+    const user = await User.findById(id).populate("myconsults");
     res.json({
       msg: "Usuario obtenido con éxito",
       data: user,
