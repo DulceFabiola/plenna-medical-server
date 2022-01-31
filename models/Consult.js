@@ -30,6 +30,7 @@ const consultSchema = Schema(
     },
 
     patient: { type: Schema.Types.ObjectId, ref: "Patient" },
+    services: [{ type: Schema.Types.ObjectId, ref: "Services" }],
   },
   {
     timestamps: true,

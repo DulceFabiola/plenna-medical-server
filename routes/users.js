@@ -31,8 +31,5 @@ router.get("/readone/:id", readOneUser);
 //EDITAR DATOS DE USUARIO
 router.put("/editprofile/:id", editUser);
 
-//CREAR CONSULTA
-router.post("/registerconsult/:id", authorization, addConsult);
-
 // EXPORTACIÓN
 module.exports = router;

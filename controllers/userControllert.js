@@ -203,27 +203,3 @@ exports.editUser = async (req, res) => {
     });
   }
 };
-
-exports.addConsult = async (req, res) => {
-  const { id } = req.params;
-
-  try {
-    const updateUser = await User.findByIdAndUpdate(
-      req.user.id,
-      {
-        $push: { myconsults: id },
-      },
-      { new: true }
-    );
-    res.json({
-      msg: "Datos actualizada con éxito",
-      data: updateUser,
-    });
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({
-      msg: "Hubo un error actualizando los datos.",
-      error: error,
-    });
-  }
-};

@@ -7,6 +7,8 @@ const {
   readOneConsult,
   editConsult,
 } = require("./../controllers/consultController");
+
+const { addServices } = require("./../controllers/servicesController");
 //2.RUTEO
 
 //CREAR CONSULTA
@@ -20,6 +22,9 @@ router.get("/readone/:id", readOneConsult);
 
 //EDITAR UNA CONSULTA
 router.put("/edit/:id", editConsult);
+
+//AGREGAR SERVICIOS
+router.post("/registerservices/:id", addServices);
 
 //3.EXPORTACION
 module.exports = router;
